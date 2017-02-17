@@ -78,7 +78,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/DholStudio/DSGradientProgressView.git", :commit => "f5a10b25ca880369491765d9f3bf26131d0730ab" }
+  #s.source       = { :git => "https://github.com/DholStudio/DSGradientProgressView.git", :commit => "f5a10b25ca880369491765d9f3bf26131d0730ab" }
+  s.source       = { :git => "https://github.com/DholStudio/DSGradientProgressView.git", :tag => "1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
