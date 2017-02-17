@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 public class DSGradientProgressView: UIView, CAAnimationDelegate {
     
-    @IBInspectable var barColor: UIColor = UIColor(hue: (29.0/360.0), saturation: 1.0, brightness: 1.0, alpha: 1.0) {
+    @IBInspectable public var barColor: UIColor = UIColor(hue: (29.0/360.0), saturation: 1.0, brightness: 1.0, alpha: 1.0) {
         didSet {
             initialize()
         }
