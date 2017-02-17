@@ -9,9 +9,9 @@
 import UIKit
 
 @IBDesignable
-class DSGradientProgressView: UIView, CAAnimationDelegate {
+public class DSGradientProgressView: UIView, CAAnimationDelegate {
     
-    @IBInspectable var barColor: UIColor = UIColor(hue: 29.0, saturation: 1.0, brightness: 1.0, alpha: 1.0) {
+    @IBInspectable var barColor: UIColor = UIColor(hue: (29.0/360.0), saturation: 1.0, brightness: 1.0, alpha: 1.0) {
         didSet {
             initialize()
         }
@@ -21,7 +21,7 @@ class DSGradientProgressView: UIView, CAAnimationDelegate {
     
     private var numberOfOperations: Int = 0
     
-    override class var layerClass: AnyClass {
+    override public class var layerClass: AnyClass {
         get {
             return CAGradientLayer.self
         }
@@ -29,19 +29,19 @@ class DSGradientProgressView: UIView, CAAnimationDelegate {
     
     // https://theswiftdev.com/2015/08/05/swift-init-patterns/
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         
         self.initialize()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
         self.initialize()
     }
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         
         self.initialize()
@@ -158,7 +158,7 @@ class DSGradientProgressView: UIView, CAAnimationDelegate {
         layer.add(animation, forKey: "animateGradient")
     }
     
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         
         // TODO: Make reads on serial queue too?
         
@@ -171,7 +171,7 @@ class DSGradientProgressView: UIView, CAAnimationDelegate {
         }
     }
     
-    func wait() {
+    public func wait() {
         serialIncrementQueue.sync {
             numberOfOperations += 1
         }
@@ -182,7 +182,7 @@ class DSGradientProgressView: UIView, CAAnimationDelegate {
         }
     }
     
-    func signal() {
+    public func signal() {
         
         if numberOfOperations == 0 {
             return
