@@ -1,7 +1,13 @@
 # DSGradientProgressView
 
+![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DSGradientProgressView.svg)](http://cocoapods.org/pods/DSGradientProgressView)
+[![Platform](https://img.shields.io/cocoapods/p/DSGradientProgressView.svg)](http://cocoapods.org/pods/DSGradientProgressView)
+
 ## Introduction
 `DSGradientProgressView` is a simple and customizable animated progress bar written in Swift.
+>Inspired by [GradientProgressView](https://github.com/nrj/GradientProgressView).
 
 ## Demo
 ![Demo gif](https://github.com/DholStudio/DSGradientProgressView/raw/master/animation.gif)
