@@ -106,4 +106,7 @@ Copy the `DSGradientProgressView.swift` to your Xcode project. That should do it
 - Xcode 8.1+
 - Swift 3.0+
 
+## Contacts
+
+* Created and maintained by [**@abhinavtyagi**](https://twitter.com/abhinavtyagi)
 
