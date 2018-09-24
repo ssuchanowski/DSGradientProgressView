@@ -103,8 +103,8 @@ Copy the `DSGradientProgressView.swift` to your Xcode project. That should do it
 ## Requirements
 
 - iOS 8.0+
-- Xcode 8.1+
-- Swift 3.0+
+- Xcode 10.0+
+- Swift 4.2+
 
 ## Contacts
 
