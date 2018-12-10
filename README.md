@@ -1,6 +1,6 @@
 # DSGradientProgressView
 
-![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg)
+![Swift Version](https://img.shields.io/badge/swift-4.2-green.svg)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DSGradientProgressView.svg)](http://cocoapods.org/pods/DSGradientProgressView)
 [![Platform](https://img.shields.io/cocoapods/p/DSGradientProgressView.svg)](http://cocoapods.org/pods/DSGradientProgressView)
