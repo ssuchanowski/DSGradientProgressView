@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author             = { "Abhinav Tyagi" => "iabtyagi@gmail.com" }
 
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/DholStudio/DSGradientProgressView.git", :tag => "1.0.2" }
+  s.source       = { :git => "https://github.com/DholStudio/DSGradientProgressView.git", :tag => s.version }
   s.source_files  = "DSGradientProgressView", "DSGradientProgressView/**/*.{h,m}"
   s.exclude_files = "DSGradientProgressView/Exclude"
 end
