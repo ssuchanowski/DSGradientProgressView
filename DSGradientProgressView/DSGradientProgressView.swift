@@ -10,6 +10,15 @@ import UIKit
 
 @IBDesignable
 public class DSGradientProgressView: UIView, CAAnimationDelegate {
+
+    fileprivate var isOn: Bool = false {
+        willSet {
+            isHidden = !isOn
+            if newValue != isOn && isOn {
+                performAnimation()
+            }
+        }
+    }
     
     @IBInspectable public var barColor: UIColor = UIColor(hue: (29.0/360.0), saturation: 1.0, brightness: 1.0, alpha: 1.0) {
         didSet {
@@ -134,7 +143,7 @@ public class DSGradientProgressView: UIView, CAAnimationDelegate {
         layer.colors = colors
     }
     
-    private func performAnimation() {
+    fileprivate func performAnimation() {
         
         // Move the last color in the array to the front
         // shifting all the other colors.
@@ -151,7 +160,7 @@ public class DSGradientProgressView: UIView, CAAnimationDelegate {
         
         let animation = CABasicAnimation(keyPath: "colors")
         animation.toValue = shiftedColors
-        animation.duration = 0.03
+        animation.duration = 0.015
         animation.isRemovedOnCompletion = true
         animation.fillMode = kCAFillModeForwards
         animation.delegate = self
@@ -159,11 +168,7 @@ public class DSGradientProgressView: UIView, CAAnimationDelegate {
     }
     
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        
-        // TODO: Make reads on serial queue too?
-        
-        if flag && numberOfOperations > 0 {
-            
+        if (flag && numberOfOperations > 0) || isOn {
             performAnimation()
         }
         else {
@@ -201,4 +206,14 @@ public class DSGradientProgressView: UIView, CAAnimationDelegate {
      }
      */
     
+}
+
+extension DSGradientProgressView {
+    public func startAnimation() {
+        isOn = true
+    }
+
+    public func stopAnimation() {
+        isOn = false
+    }
 }
