@@ -152,7 +152,7 @@ public class DSGradientProgressView: UIView, CAAnimationDelegate {
         
         let animation = CABasicAnimation(keyPath: "colors")
         animation.toValue = shiftedColors
-        animation.duration = 0.03
+        animation.duration = 0.02
         animation.isRemovedOnCompletion = true
         animation.fillMode = CAMediaTimingFillMode.forwards
         animation.delegate = self
