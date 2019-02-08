@@ -154,7 +154,7 @@ public class DSGradientProgressView: UIView, CAAnimationDelegate {
         animation.toValue = shiftedColors
         animation.duration = 0.02
         animation.isRemovedOnCompletion = true
-        animation.fillMode = CAMediaTimingFillMode.forwards
+        animation.fillMode = kCAFillModeForwards
         animation.delegate = self
         layer.add(animation, forKey: "animateGradient")
     }
