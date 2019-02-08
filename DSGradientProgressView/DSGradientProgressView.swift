@@ -135,6 +135,7 @@ public class DSGradientProgressView: UIView, CAAnimationDelegate {
     }
     
     private func performAnimation() {
+        self.isHidden = false
         
         // Move the last color in the array to the front
         // shifting all the other colors.
@@ -163,7 +164,6 @@ public class DSGradientProgressView: UIView, CAAnimationDelegate {
         // TODO: Make reads on serial queue too?
         
         if flag && numberOfOperations > 0 {
-            
             performAnimation()
         }
         else {
@@ -175,7 +175,6 @@ public class DSGradientProgressView: UIView, CAAnimationDelegate {
         serialIncrementQueue.sync {
             numberOfOperations += 1
         }
-        self.isHidden = false
         
         if numberOfOperations == 1 { // rest will be called from animationDidStop
             performAnimation()
@@ -183,7 +182,6 @@ public class DSGradientProgressView: UIView, CAAnimationDelegate {
     }
     
     public func signal() {
-        
         if numberOfOperations == 0 {
             return
         }
